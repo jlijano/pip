@@ -21,6 +21,19 @@ Open `index.html` in a browser or host the repository as a static site.
 
 Enter a department or process in the generator field, or use one of the quick-select chips. The app will generate a tailored process improvement plan and enable export options for meeting-ready use.
 
+## GitHub Pages deployment
+
+This repository includes a GitHub Pages workflow at `.github/workflows/pages.yml`.
+
+To serve the app at `https://jlijano.github.io/pip/`:
+
+1. Open the repository settings in GitHub.
+2. Go to **Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Run the **Deploy static site to GitHub Pages** workflow, or push a new commit to `main`.
+
+The site entry point is `index.html` in the repository root. The `.nojekyll` file is included so GitHub Pages serves static assets without Jekyll processing.
+
 ## Included departments
 
 - Human Resources
