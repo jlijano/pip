@@ -21,6 +21,17 @@ Open `index.html` in a browser or host the repository as a static site.
 
 Enter a department or process in the generator field, or use one of the quick-select chips. The app will generate a tailored process improvement plan and enable export options for meeting-ready use.
 
+## Render deployment
+
+This repository includes `render.yaml` so Render can run the static site through the included Node server.
+
+Expected Render settings:
+
+- Build Command: `npm install && npm run build`
+- Start Command: `npm start`
+
+The `start` script runs `node server.js`, and `server.js` listens on `process.env.PORT`, which Render provides at runtime. Do not use the build command as the start command; the build script is intentionally short-lived and will exit after printing that no static build step is required.
+
 ## GitHub Pages deployment
 
 This repository includes a GitHub Pages workflow at `.github/workflows/pages.yml`.
